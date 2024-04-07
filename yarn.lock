@@ -202,7 +202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fastify/view@npm:^9.0.0":
+"@fastify/view@npm:9.0.0":
   version: 9.0.0
   resolution: "@fastify/view@npm:9.0.0"
   dependencies:
@@ -841,7 +841,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"handlebars@npm:^4.7.8":
+"handlebars@npm:4.7.8":
   version: 4.7.8
   resolution: "handlebars@npm:4.7.8"
   dependencies:
@@ -870,22 +870,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "htmx-ssr@workspace:."
   dependencies:
-    "@fastify/view": "npm:^9.0.0"
+    "@fastify/view": "npm:9.0.0"
     "@types/node": "npm:20.12.4"
     fastify: "npm:4.26.2"
-    handlebars: "npm:^4.7.8"
-    htmx.org: "npm:1.9.11"
+    handlebars: "npm:4.7.8"
     tsx: "npm:4.7.2"
     typescript: "npm:5.4.3"
   languageName: unknown
   linkType: soft
-
-"htmx.org@npm:1.9.11":
-  version: 1.9.11
-  resolution: "htmx.org@npm:1.9.11"
-  checksum: 10c0/54283a33bfe0323637c6bbe6ee78feeed650a83ae6741ead6ff109cd81d965a79ab01efb0f51e3a8d39b86c71de8e9d8efc1c8339221863c21b016f2f24d81d3
-  languageName: node
-  linkType: hard
 
 "http-cache-semantics@npm:^4.1.1":
   version: 4.1.1
