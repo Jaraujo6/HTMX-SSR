@@ -1,7 +1,13 @@
 import Fastify from "fastify";
 import pointOfView from "@fastify/view";
+import staticFiles from "@fastify/static";
 import handlebars from "handlebars";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 const fastify = Fastify({
   logger: true,
@@ -11,8 +17,8 @@ fastify.register(pointOfView, {
   engine: {
     handlebars,
   },
-  root: path.join("src", "templates"),
-  // propertyName: "render",
+  root: path.join(__dirname, "templates"),
+  propertyName: "render",
   // layout: "./templates/layout.hbs",
   // options: {
   //   partials: {
@@ -22,12 +28,17 @@ fastify.register(pointOfView, {
   // }
 });
 
+fastify.register(staticFiles, {
+  root: path.join(__dirname, "static"),
+  prefix: "/static",
+});
+
 fastify.get("/", function getHomePage(req, reply) {
-  reply.view("./demo.hbs");
+  reply.render("./demo.hbs");
 });
 
 fastify.get("/html", function getHomePage(req, reply) {
-  reply.view("./homepage.html");
+  reply.render("./homepage.html");
 });
 
 fastify.get("/json", function getHelloWorld(req, reply) {
