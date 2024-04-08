@@ -28,7 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@fastify/static", "npm:7.0.3"],\
           ["@fastify/view", "npm:9.0.0"],\
-          ["@types/node", "npm:20.12.4"],\
+          ["@types/node", "npm:20.12.5"],\
           ["fastify", "npm:4.26.2"],\
           ["handlebars", "npm:4.7.8"],\
           ["tsx", "npm:4.7.2"],\
@@ -401,10 +401,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
-      ["npm:20.12.4", {\
-        "packageLocation": "../../.yarn/berry/cache/@types-node-npm-20.12.4-f6c430aaa3-10c0.zip/node_modules/@types/node/",\
+      ["npm:20.12.5", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-node-npm-20.12.5-4856f14d45-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.12.4"],\
+          ["@types/node", "npm:20.12.5"],\
           ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
@@ -1077,7 +1077,7 @@ const RAW_RUNTIME_STATE =
           ["htmx-ssr", "workspace:."],\
           ["@fastify/static", "npm:7.0.3"],\
           ["@fastify/view", "npm:9.0.0"],\
-          ["@types/node", "npm:20.12.4"],\
+          ["@types/node", "npm:20.12.5"],\
           ["fastify", "npm:4.26.2"],\
           ["handlebars", "npm:4.7.8"],\
           ["tsx", "npm:4.7.2"],\

@@ -18,7 +18,6 @@ fastify.register(pointOfView, {
     handlebars,
   },
   root: path.join(__dirname, "templates"),
-  propertyName: "render",
   // layout: "./templates/layout.hbs",
   // options: {
   //   partials: {
@@ -34,11 +33,11 @@ fastify.register(staticFiles, {
 });
 
 fastify.get("/", function getHomePage(req, reply) {
-  reply.render("./demo.hbs");
+  reply.view("./demo.hbs");
 });
 
 fastify.get("/html", function getHomePage(req, reply) {
-  reply.render("./homepage.html");
+  reply.view("./homepage.html");
 });
 
 fastify.get("/json", function getHelloWorld(req, reply) {
