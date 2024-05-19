@@ -12,7 +12,9 @@
     "removeComments": true,
     "sourceMap": true,
     "strict": true,
-    "allowJs": true
+    "allowJs": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true
   },
   "include": ["src/**/*", "functions"]
 }
