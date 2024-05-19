@@ -1,6 +1,7 @@
 {
   "name": "htmx-ssr",
   "packageManager": "yarn@4.2.2",
+  "engines": {"node": "20"},
   "type": "module",
   "scripts": {
     "build": "yarn tsc -p tsconfig.json && cp -r ./src/static ./dist/static && cp -r ./src/templates ./dist/templates",
