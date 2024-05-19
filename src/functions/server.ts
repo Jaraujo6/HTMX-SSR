@@ -1,7 +1,7 @@
 import type { Handler } from "@netlify/functions"
 import { HTTPMethods } from "fastify"
 
-import { init } from "../app.mjs"
+import { init } from "../app.js"
 
 export const handler: Handler = async (event, context) => {
   const server = init()
