@@ -5,6 +5,7 @@
     "lib": ["esnext"],
     "types": ["node"],
     "target": "ESNext",
+    "outDir": "dist",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
