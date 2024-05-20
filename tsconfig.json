@@ -3,9 +3,10 @@
     "module": "CommonJS",
     "lib": ["esnext"],
     "types": ["node"],
-    "target": "ESNext",
+    "target": "ES6",
     "outDir": "dist",
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
     "preserveConstEnums": true,
@@ -14,5 +15,5 @@
     "strict": true,
     "allowJs": true
   },
-  "include": ["src/**/*", "functions"]
+  "include": ["src/**/*"]
 }

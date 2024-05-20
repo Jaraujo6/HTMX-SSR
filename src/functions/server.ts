@@ -3,7 +3,7 @@ import { HTTPMethods } from "fastify"
 
 import { init } from "../app.js"
 
-export const handler: Handler = async (event, context) => {
+const handler: Handler = async (event, context) => {
   const server = init()
 
   try {
@@ -25,4 +25,8 @@ export const handler: Handler = async (event, context) => {
       body: JSON.stringify({ error: 'Internal Server Error' }),
     };
   }
+}
+
+export default {
+  handler
 }
