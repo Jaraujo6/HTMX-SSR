@@ -6,7 +6,7 @@
   },
   "type": "commonjs",
   "scripts": {
-    "build": "rm -rf ./dist && yarn && yarn tsc -p tsconfig.json && cp -r ./src/static ./dist/static && cp -r ./src/templates ./dist/templates",
+    "build": "rm -rf ./dist && npm install &&  tsc -p tsconfig.json && cp -r ./src/static ./dist/static && cp -r ./src/templates ./dist/templates",
     "dev": "tsx --watch src/app.ts",
     "start": "node ./dist/functions/server.js"
   },
