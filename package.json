@@ -1,6 +1,6 @@
 {
   "name": "htmx-ssr",
-  "packageManager": "yarn@4.2.2",
+  "packageManager": "npm@10.8.0",
   "engines": {
     "node": "20"
   },
