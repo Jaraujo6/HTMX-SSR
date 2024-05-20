@@ -40,23 +40,23 @@ export function init() {
     return { hello: "world" };
   });
 
-  fastify.listen({ port: 3000 }, function runServer(err, address) {
-    if (err) {
-      fastify.log.error(err)
-      process.exit(1)
-    }
-    fastify.log.info('Server now listening on port 3000')
-  })
+  // fastify.listen({ port: 3000 }, function runServer(err, address) {
+  //   if (err) {
+  //     fastify.log.error(err)
+  //     process.exit(1)
+  //   }
+  //   fastify.log.info('Server now listening on port 3000')
+  // })
 
   return fastify
 }
 
-// if (require.main === module) {
-//   const port = Number(process.env.PORT) || 8080
-//   init().listen({port}, (err) => {
-//     if (err) console.error(err)
-//     console.log('listening on')
-//   })
-// } else {
-//   module.exports = init
-// }
+if (require.main === module) {
+  const port = Number(process.env.PORT) || 8080
+  init().listen({ port }, (err) => {
+    if (err) console.error(err)
+    console.log('listening on')
+  })
+} else {
+  module.exports = init
+}

@@ -1,32 +1,33 @@
-import type { Handler } from "@netlify/functions"
-import { HTTPMethods } from "fastify"
+// import type { Handler } from "@netlify/functions"
+// import { HTTPMethods } from "fastify"
+import awsLambdaFastify from '@fastify/aws-lambda'
 
 import { init } from "../app.js"
 
-const handler: Handler = async (event, context) => {
-  const server = init()
+// const handler: Handler = async (event, context) => {
+//   const server = init()
 
-  try {
-    type Method = HTTPMethods | undefined
-    const result = await server.inject({
-      method: event.httpMethod as any,
-      url: event.path,
-      payload: event.body ?? undefined
-    })
+//   try {
+//     type Method = HTTPMethods | undefined
+//     const result = await server.inject({
+//       method: event.httpMethod as any,
+//       url: event.path,
+//       payload: event.body ?? undefined
+//     })
 
-    return {
-      body: result.body,
-      headers: result.headers as any,
-      statusCode: result.statusCode,
-    }
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Internal Server Error' }),
-    };
-  }
-}
+//     return {
+//       body: result.body,
+//       headers: result.headers as any,
+//       statusCode: result.statusCode,
+//     }
+//   } catch (error) {
+//     return {
+//       statusCode: 500,
+//       body: JSON.stringify({ error: 'Internal Server Error' }),
+//     };
+//   }
+// }
 
 export default {
-  handler
+  handler: awsLambdaFastify(init())
 }
